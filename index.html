@@ -41,9 +41,14 @@
     <script>
         // Social Media User Search Button Click Listeners
         document.getElementById("facebookSearchButton").addEventListener("click", function() {
-            performSearch("https://www.facebook.com/");
+            var searchTerm = document.getElementById("searchTerm").value;
+            if (searchTerm.trim() !== "") {
+                var facebookURL = "https://www.facebook.com/search/people/?q=" + encodeURIComponent(searchTerm);
+                window.open(facebookURL, "_blank");
+            } else {
+                alert("Please enter a search term.");
+            }
         });
-
         document.getElementById("instagramSearchButton").addEventListener("click", function() {
             performSearch("https://www.instagram.com/");
         });
