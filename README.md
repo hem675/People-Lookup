@@ -1,2 +1,2 @@
 # People-Lookup
-Find Profiles by name or usernames 
+Find Profiles by name or username 
