@@ -36,6 +36,9 @@
     <button id="bloggerProfileSearchButton">Blogger</button><br>
     <button id="swiggySearchButton">Swiggy </button><br>
     <button id="zomatoSearchButton">Zomato </button><br>
+     <button id="linktreeSearchButton">Linktree Profile Search</button><br>
+    <button id="keybaseSearchButton">Keybase Profile Search</button><br>
+    <button id="duolingoSearchButton">Duolingo Profile Search</button><br>
     <button id="searchAllButton">Search All</button><br>
 
     <script>
@@ -212,6 +215,37 @@
                 alert("Please enter a search term.");
             }
         });
+        
+         document.getElementById("linktreeSearchButton").addEventListener("click", function() {
+            var searchTerm = document.getElementById("searchTerm").value;
+            if (searchTerm.trim() !== "") {
+                var linktreeURL = "https://linktr.ee/" + encodeURIComponent(searchTerm);
+                window.open(linktreeURL, "_blank");
+            } else {
+                alert("Please enter a search term.");
+            }
+        });
+     
+        document.getElementById("keybaseSearchButton").addEventListener("click", function() {
+            var searchTerm = document.getElementById("searchTerm").value;
+            if (searchTerm.trim() !== "") {
+                var keybaseURL = "https://keybase.io/" + encodeURIComponent(searchTerm);
+                window.open(keybaseURL, "_blank");
+            } else {
+                alert("Please enter a search term.");
+            }
+        });
+
+        document.getElementById("duolingoSearchButton").addEventListener("click", function() {
+            var searchTerm = document.getElementById("searchTerm").value;
+            if (searchTerm.trim() !== "") {
+                var duolingoURL = "https://www.duolingo.com/profile/" + encodeURIComponent(searchTerm);
+                window.open(duolingoURL, "_blank");
+            } else {
+                alert("Please enter a search term.");
+            }
+        });
+
 
         // Function to perform the search based on the provided URL
         function performSearch(baseURL) {
