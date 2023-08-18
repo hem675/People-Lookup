@@ -137,7 +137,7 @@
         document.getElementById("pinterestProfileSearchButton").addEventListener("click", function() {
             var searchTerm = document.getElementById("searchTerm").value;
             if (searchTerm.trim() !== "") {
-                var pinterestURL = "https://in.pinterest.com/search/people/?q=";
+                var pinterestURL = "https://in.pinterest.com/" + encodeURIComponent(searchTerm);
                 window.open(pinterestURL, "_blank");
             } else {
                 alert("Please enter a search term.");
