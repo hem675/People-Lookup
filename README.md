@@ -54,3 +54,13 @@ Linktree Search
 Keybase
 
 Duolingo
+
+WordPress 
+
+Fiverr 
+
+Dev Community 
+
+Pastebin 
+
+PayPal
