@@ -2,7 +2,27 @@
 <html>
 <head>
     <title>Search Multi-Tab</title>
+    <style>
+        /* Style for the buttons container */
+        .buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-between;
+        }
+
+        /* Style for individual buttons */
+        .search-button {
+            width: calc(25% - 10px); /* 25% width with 10px gap */
+            height: 50px; /* Set a fixed height for consistent button heights */
+            display: flex;
+            align-items: center; /* Center the text vertically */
+            justify-content: center; /* Center the text horizontally */
+            font-size: 14px; /* Adjust font size if needed */
+        }
+    </style>
 </head>
+
 <body>
     <h1>People Search </h1>
 
@@ -10,40 +30,44 @@
     <input type="text" id="searchTerm" placeholder="username"><br><br>
 
     <!-- Social Media User Search Buttons -->
-    <button id="facebookSearchButton">Facebook</button><br>
-    <button id="instagramSearchButton">Instagram </button><br>
-    <button id="tiktokUserSearchButton">TikTok</button><br>
-    <button id="vkSearchButton">VK</button><br>
-    <button id="redditSearchButton">Reddit</button><br>
-    <button id="chessSearchButton">Chess.com</button><br>
-    <button id="githubSearchButton">GitHub</button><br>
-    <button id="youtubeSearchButton">YouTube</button><br>
-    <button id="specificTermButton">Specific username</button><br>
-    <button id="linkedinProfileSearchButton">LinkedIn</button><br>
-    <button id="twitterProfileSearchButton">Twitter </button><br>
-    <button id="twitchProfileSearchButton">Twitch </button><br>
-    <button id="pinterestProfileSearchButton">Pinterest</button><br>
-    <button id="tumblrProfileSearchButton">Tumblr</button><br>
-    <button id="flickrProfileSearchButton">Flickr </button><br>
-    <button id="mediumProfileSearchButton">Medium </button><br>
-    <button id="quoraProfileSearchButton">Quora</button><br>
-    <button id="leetcodeProfileSearchButton">LeetCode </button><br>
-    <button id="hackerrankProfileSearchButton">HackerRank</button><br>
-    <button id="spotifyProfileSearchButton">Spotify </button><br>
-    <button id="bloggerProfileSearchButton">Blogger</button><br>
-    <button id="swiggySearchButton">Swiggy </button><br>
-    <button id="zomatoSearchButton">Zomato </button><br>
-    <button id="linktreeSearchButton">Linktree</button><br>
-    <button id="keybaseSearchButton">Keybase</button><br>
-    <button id="duolingoSearchButton">Duolingo</button><br>
-    <button id="wordpressSearchButton">WordPress</button><br>
-    <button id="fiverrSearchButton">Fiverr</button><br>
-    <button id="devCommunitySearchButton">Dev Community</button><br>
-    <button id="pastebinSearchButton">Pastebin</button><br>
-    <button id="paypalSearchButton">PayPal</button><br>
-    <button id="searchAllButton">Search All</button><br>
+    <div class="buttons-container">
+        <!-- Social Media User Search Buttons -->
+        <button class="search-button" id="facebookSearchButton">Facebook</button>
+        <button class="search-button" id="instagramSearchButton">Instagram</button>
+        <button class="search-button" id="tiktokUserSearchButton">TikTok</button>
+        <button class="search-button" id="vkSearchButton">VK</button>
+        <button class="search-button" id="redditSearchButton">Reddit</button>
+        <button class="search-button" id="chessSearchButton">Chess.com</button>
+        <button class="search-button" id="githubSearchButton">GitHub</button>
+        <button class="search-button" id="youtubeSearchButton">YouTube</button>
+        <button class="search-button" id="specificTermButton">Specific username</button>
+        <button class="search-button" id="linkedinProfileSearchButton">LinkedIn</button>
+        <button class="search-button" id="twitterProfileSearchButton">Twitter</button>
+        <button class="search-button" id="twitchProfileSearchButton">Twitch</button>
+        <button class="search-button" id="pinterestProfileSearchButton">Pinterest</button>
+        <button class="search-button" id="tumblrProfileSearchButton">Tumblr</button>
+        <button class="search-button" id="flickrProfileSearchButton">Flickr</button>
+        <button class="search-button" id="mediumProfileSearchButton">Medium</button>
+        <button class="search-button" id="quoraProfileSearchButton">Quora</button>
+        <button class="search-button" id="leetcodeProfileSearchButton">LeetCode</button>
+        <button class="search-button" id="hackerrankProfileSearchButton">HackerRank</button>
+        <button class="search-button" id="spotifyProfileSearchButton">Spotify</button>
+        <button class="search-button" id="bloggerProfileSearchButton">Blogger</button>
+        <button class="search-button" id="swiggySearchButton">Swiggy</button>
+        <button class="search-button" id="zomatoSearchButton">Zomato</button>
+        <button class="search-button" id="linktreeSearchButton">Linktree</button>
+        <button class="search-button" id="keybaseSearchButton">Keybase</button>
+        <button class="search-button" id="duolingoSearchButton">Duolingo</button>
+        <button class="search-button" id="wordpressSearchButton">WordPress</button>
+        <button class="search-button" id="fiverrSearchButton">Fiverr</button>
+        <button class="search-button" id="devCommunitySearchButton">Dev Community</button>
+        <button class="search-button" id="pastebinSearchButton">Pastebin</button>
+        <button class="search-button" id="paypalSearchButton">PayPal</button>
+        <button class="search-button" id="searchAllButton">Search All</button>
+    </div>
 
     <script>
+        
         // Social Media User Search Button Click Listeners
         document.getElementById("facebookSearchButton").addEventListener("click", function() {
             var searchTerm = document.getElementById("searchTerm").value;
@@ -309,6 +333,7 @@
                 alert("Please enter a search term.");
             }
         }
+    
     </script>
 </body>
 </html>
