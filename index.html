@@ -36,9 +36,20 @@
     <button id="bloggerProfileSearchButton">Blogger</button><br>
     <button id="swiggySearchButton">Swiggy </button><br>
     <button id="zomatoSearchButton">Zomato </button><br>
+<<<<<<< Updated upstream
      <button id="linktreeSearchButton">Linktree Search</button><br>
     <button id="keybaseSearchButton">Keybase</button><br>
     <button id="duolingoSearchButton">Duolingo </button><br>
+=======
+    <button id="linktreeSearchButton">Linktree</button><br>
+    <button id="keybaseSearchButton">Keybase</button><br>
+    <button id="duolingoSearchButton">Duolingo</button><br>
+    <button id="wordpressSearchButton">WordPress</button><br>
+    <button id="fiverrSearchButton">Fiverr</button><br>
+    <button id="devCommunitySearchButton">Dev Community</button><br>
+    <button id="pastebinSearchButton">Pastebin</button><br>
+    <button id="paypalSearchButton">PayPal</button><br>
+>>>>>>> Stashed changes
     <button id="searchAllButton">Search All</button><br>
 
     <script>
@@ -241,6 +252,56 @@
             if (searchTerm.trim() !== "") {
                 var duolingoURL = "https://www.duolingo.com/profile/" + encodeURIComponent(searchTerm);
                 window.open(duolingoURL, "_blank");
+            } else {
+                alert("Please enter a search term.");
+            }
+        });
+
+        document.getElementById("wordpressSearchButton").addEventListener("click", function() {
+            var searchTerm = document.getElementById("searchTerm").value;
+            if (searchTerm.trim() !== "") {
+                var wordpressURL = "https://" + encodeURIComponent(searchTerm) + ".wordpress.com/";
+                window.open(wordpressURL, "_blank");
+            } else {
+                alert("Please enter a search term.");
+            }
+        });
+
+      document.getElementById("fiverrSearchButton").addEventListener("click", function() {
+            var searchTerm = document.getElementById("searchTerm").value;
+            if (searchTerm.trim() !== "") {
+                var fiverrURL = "https://www.fiverr.com/" + encodeURIComponent(searchTerm);
+                window.open(fiverrURL, "_blank");
+            } else {
+                alert("Please enter a search term.");
+            }
+        });
+     
+      document.getElementById("devCommunitySearchButton").addEventListener("click", function() {
+            var searchTerm = document.getElementById("searchTerm").value;
+            if (searchTerm.trim() !== "") {
+                var devCommunityURL = "https://dev.to/" + encodeURIComponent(searchTerm);
+                window.open(devCommunityURL, "_blank");
+            } else {
+                alert("Please enter a search term.");
+            }
+        });
+
+       document.getElementById("pastebinSearchButton").addEventListener("click", function() {
+            var searchTerm = document.getElementById("searchTerm").value;
+            if (searchTerm.trim() !== "") {
+                var pastebinURL = "site:pastebin.com \"" + encodeURIComponent(searchTerm) + "\"";
+                window.open("https://www.google.com/search?q=" + encodeURIComponent(pastebinURL), "_blank");
+            } else {
+                alert("Please enter a search term.");
+            }
+        });
+
+       document.getElementById("paypalSearchButton").addEventListener("click", function() {
+            var searchTerm = document.getElementById("searchTerm").value;
+            if (searchTerm.trim() !== "") {
+                var paypalURL = "https://www.paypal.com/paypalme/" + encodeURIComponent(searchTerm);
+                window.open(paypalURL, "_blank");
             } else {
                 alert("Please enter a search term.");
             }
