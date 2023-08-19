@@ -1,7 +1,7 @@
 # People-Lookup
 Find Profiles by name or username 
 
-Modules:
+Modules used:
 
 Facebook - Login Required
 Instagram
