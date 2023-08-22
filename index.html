@@ -195,8 +195,14 @@
             performSearch("https://medium.com/@");
         });
 
-        document.getElementById("quoraProfileSearchButton").addEventListener("click", function() {
-            performSearch("https://www.quora.com/profile/");
+       document.getElementById("quoraProfileSearchButton").addEventListener("click", function() {
+            var searchTerm = document.getElementById("searchTerm").value;
+            if (searchTerm.trim() !== "") {
+                var quoraURL = "https://www.quora.com/search?q=" + encodeURIComponent(searchTerm) + "&type=profile";
+                window.open(quoraURL, "_blank");
+            } else {
+                alert("Please enter a search term.");
+            }
         });
 
         document.getElementById("leetcodeProfileSearchButton").addEventListener("click", function() {
