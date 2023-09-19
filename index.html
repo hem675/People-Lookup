@@ -57,7 +57,6 @@
         <button class="search-button" id="hackerrankProfileSearchButton">HackerRank</button>
         <button class="search-button" id="spotifyProfileSearchButton">Spotify</button>
         <button class="search-button" id="bloggerProfileSearchButton">Blogger</button>
-        <button class="search-button" id="swiggySearchButton">Swiggy</button>
         <button class="search-button" id="zomatoSearchButton">Zomato</button>
         <button class="search-button" id="linktreeSearchButton">Linktree</button>
         <button class="search-button" id="keybaseSearchButton">Keybase</button>
@@ -67,6 +66,13 @@
         <button class="search-button" id="devCommunitySearchButton">Dev Community</button>
         <button class="search-button" id="pastebinSearchButton">Pastebin</button>
         <button class="search-button" id="paypalSearchButton">PayPal</button>
+        <button class="search-button" id="smuleSearchButton">Smule</button>
+        <button class="search-button" id="tinderSearchButton">Tinder</button>
+        <button class="search-button" id="stackoverflowButton">Stackoverflow</button>
+        <button class="search-button" id="robloxSearchButton">Roblox</button>
+        <button class="search-button" id="tripadvisorSearchButton">TripAdvisor</button>
+
+
         <button class="search-button" id="searchAllButton">Search All</button>
     </div>
 
@@ -232,15 +238,7 @@
             }
         });
         
-        document.getElementById("swiggySearchButton").addEventListener("click", function() {
-            var searchTerm = document.getElementById("searchTerm").value;
-            if (searchTerm.trim() !== "") {
-                var swiggyURL = "https://www.google.com/search?q=%22" + encodeURIComponent(searchTerm) + "%22%20site%3Aswiggy.com";
-                window.open(swiggyURL, "_blank");
-            } else {
-                alert("Please enter a search term.");
-            }
-        });
+   
 
         document.getElementById("zomatoSearchButton").addEventListener("click", function() {
             var searchTerm = document.getElementById("searchTerm").value;
@@ -331,6 +329,60 @@
                 alert("Please enter a search term.");
             }
         });
+
+       document.getElementById("smuleSearchButton").addEventListener("click", function() {
+            var searchTerm = document.getElementById("searchTerm").value;
+            if (searchTerm.trim() !== "") {
+                var smuleURL = "https://www.smule.com/" + encodeURIComponent(searchTerm);
+                window.open(smuleURL, "_blank");
+            } else {
+                alert("Please enter a search term.");
+            }
+        });
+
+            document.getElementById("tinderSearchButton").addEventListener("click", function() {
+            var searchTerm = document.getElementById("searchTerm").value;
+            if (searchTerm.trim() !== "") {
+                var tinderURL = "https://tinder.com/" + encodeURIComponent(searchTerm);
+                window.open(tinderURL, "_blank");
+            } else {
+                alert("Please enter a search term.");
+            }
+        });
+        
+        document.getElementById("robloxSearchButton").addEventListener("click", function() {
+            var searchTerm = document.getElementById("searchTerm").value;
+            if (searchTerm.trim() !== "") {
+                var robloxURL = "https://www.roblox.com/search/users?keyword=" + encodeURIComponent(searchTerm);
+                window.open(robloxURL, "_blank");
+            } else {
+                alert("Please enter a search term.");
+            }
+        });
+
+      document.getElementById("stackoverflowButton").addEventListener("click", function() {
+            var searchTerm = document.getElementById("searchTerm").value;
+            if (searchTerm.trim() !== "") {
+                // Enclose the search term in double quotes and add the site restriction
+                var stackoverflowURL = '"' + searchTerm + '" site:stackoverflow.com';
+                var searchURL = "https://www.google.com/search?q=" + encodeURIComponent(stackoverflowURL);
+                window.open(searchURL, "_blank");
+            } else {
+                alert("Please enter a search term.");
+            }
+        });
+
+       document.getElementById("tripadvisorSearchButton").addEventListener("click", function() {
+            var searchTerm = document.getElementById("searchTerm").value;
+            if (searchTerm.trim() !== "") {
+                var tripadvisorURL = "https://www.tripadvisor.in/Profile/" + encodeURIComponent(searchTerm);
+                window.open(tripadvisorURL, "_blank");
+            } else {
+                alert("Please enter a search term.");
+            }
+        });
+
+       
 
 
         // Function to perform the search based on the provided URL
