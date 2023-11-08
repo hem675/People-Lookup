@@ -1,5 +1,7 @@
 # People-Lookup
-Find Profiles by name or username 
+Find Profiles by name or username.
+My tool addresses the challenge of sifting through numerous websites during an OSINT investigation. 
+It streamlines the process by focusing on the most frequently accessed and relevant websites, optimizing time and efficiency.
 
 Modules used:
 
