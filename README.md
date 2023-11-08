@@ -45,8 +45,6 @@ Spotify
 
 Blogger
 
-Swiggy
-
 Zomato
 
 Linktree Search
@@ -64,3 +62,13 @@ Dev Community
 Pastebin 
 
 PayPal
+
+Smule
+
+Tinder
+
+StackOverflow
+
+Roblox
+
+Trip Advisor
